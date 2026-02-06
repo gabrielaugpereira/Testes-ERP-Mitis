@@ -36,7 +36,7 @@ def main():
 
 
 class Configs:
-    SPEED = 1
+    SPEED = 0.75
     DEBUG = False
 
 
@@ -154,7 +154,7 @@ class FuncoesAuxiliares:
         
         else:    
             type(Key.WIN)
-            type('C:\Program Files (x86)\ERP Mitis NEW 25\erpmts.exe')
+            type(os.environ.get('MITIS_ERP_LOCAL_APP'))
             type(Key.ENTER)
             cls.inform_dados_usuario()
 
@@ -167,9 +167,9 @@ class FuncoesAuxiliares:
     @staticmethod
     def inform_dados_usuario():
         T.espere(Constantes.INPUT_USERNAME, 15)
-        type(Constantes.INPUT_USERNAME, ''.format(os.environ.get('MITIS_ERP_USER')))
+        type(Constantes.INPUT_USERNAME, os.environ.get('MITIS_ERP_USER'))
         type(Key.TAB)
-        type(''.format(os.environ.get('MITIS_ERP_USER')))
+        type(os.environ.get('MITIS_ERP_PASSWORD'))
         type(Key.TAB)
         type('109')
         type(Key.TAB)
@@ -290,7 +290,7 @@ class FuncoesAuxiliares:
             timeout -= 1
             
         if timeout == 0: 
-            raise FindFailed("O conteudo esperedo ({}) nao apareceu em aviso".format(conteudo))
+            raise FindFailed("O conteudo esperado ({}) nao apareceu em aviso".format(conteudo))
 
 
 # ===================================================================================================================================
