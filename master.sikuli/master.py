@@ -1,5 +1,6 @@
 # coding=utf-8
 Settings.ActionLogs=0
+import os
 import random
 import time
 import datetime
@@ -166,9 +167,9 @@ class FuncoesAuxiliares:
     @staticmethod
     def inform_dados_usuario():
         T.espere(Constantes.INPUT_USERNAME, 15)
-        type(Constantes.INPUT_USERNAME, 'mitis')
+        type(Constantes.INPUT_USERNAME, ''.format(os.environ.get('MITIS_ERP_USER')))
         type(Key.TAB)
-        type('mitis01')
+        type(''.format(os.environ.get('MITIS_ERP_USER')))
         type(Key.TAB)
         type('109')
         type(Key.TAB)
