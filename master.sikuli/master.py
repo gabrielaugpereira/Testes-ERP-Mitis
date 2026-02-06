@@ -331,7 +331,7 @@ class TesteAbstrato():
         hora_resultado = '{}:{}:{}'.format(now.hour, now.minute, now.second)
 
         if passou: passou = 'PASSOU'
-        else: passou = 'FuncoesAuxiliaresLHOU'
+        else: passou = 'FALHOU'
 
         mensagem_resultado_exec = "Situacao do teste {} - {}".format(cls.cont_testes, cls.__str__())
         print('{}{}{}'.format(mensagem_resultado_exec, cls.retorna_pontos(mensagem_resultado_exec, passou), passou))
