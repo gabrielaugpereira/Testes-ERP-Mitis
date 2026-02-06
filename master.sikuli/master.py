@@ -153,7 +153,7 @@ class FuncoesAuxiliares:
         
         else:    
             type(Key.WIN)
-            type('erpmts')
+            type('C:\Program Files (x86)\ERP Mitis NEW 25\erpmts.exe')
             type(Key.ENTER)
             cls.inform_dados_usuario()
 
